@@ -6,7 +6,21 @@
         xmlns:local="clr-namespace:ImageWorker"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
+        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="10">
+            <Button Content="Выбрать рисунок" Click="ButtonChooseFile_OnClick" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="10">
+            <Border Background="LightGray" Margin="10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Image x:Name="imagePreview" Stretch="UniformToFill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" StretchDirection="Both"/>
+            </Border> 
+        </StackPanel>
     </Grid>
 </Window>
