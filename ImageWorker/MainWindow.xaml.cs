@@ -33,5 +33,16 @@ namespace ImageWorker
                 }
             }
         }
+
+        private void ButtonProcess_OnClick(object sender, RoutedEventArgs e)
+        {
+            var texture = ImageEffects.GetIntArrayFromBitmapSource(imagePreview.Source as BitmapSource);
+            int[,] blurredTexture = ImageEffects.BlurTexture(texture, 3); // Размер ядра: 3x3
+            var originSource = imagePreview.Source as BitmapSource;
+            var resultBitmap = new WriteableBitmap(originSource);
+            ImageEffects.Brightness(resultBitmap, 1.5f);
+            resultImage.Source = resultBitmap;
+            // resultImage.Source = blurredTexture;
+        }
     }
 }

@@ -28,7 +28,7 @@
                 <Separator HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="16" />
             </StackPanel>
             <StackPanel Grid.Row="1" Orientation="Vertical" VerticalAlignment="Bottom">
-                <Button></Button>
+                <Button Click="ButtonProcess_OnClick">Начать</Button>
             </StackPanel>
         </Grid>
 
@@ -43,6 +43,7 @@
             </Border>
             <Separator Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="16" />
             <Border Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="LightGray">
+                <Image x:Name="resultImage" Stretch="UniformToFill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" StretchDirection="Both"/>
             </Border>
         </Grid>
         
